@@ -17,37 +17,36 @@ function promptPasswordOptions() {
   characters = parseInt(characters)
     if(characters < 8 || characters > 128) {
       alert ("characters must be betwwen 8-128")
-      return
+      return;
     }
 
 // make a conditional to handle for user for "NAN"
-// if(isNaN(uppercase, lowercase, specialCharacter)){
-//   return "not a number"}
-// if (generateBtn === "") {
+// if(isNaN()){
+//   return "Not a number"}
 //   alert("Please enter a number")
 //   return;
-// }
-
+}
 
 
 // make conditional that handles if a number is less than 8, larger than 128.
-// if (numbers <8 || numbers >128){
-//   alert("number must be between 8-128.")
+
+// if(characters < 8 || characters > 128) {
+//   alert ("characters must be betwwen 8-128")
 //   return;
 // }
 
 // make 4 variables for each confirm statements
-  // var uppercase;
-  // var lowercase;
-  // var numbers;
-  // var specialCharacter;
+  var uppercase;
+  var lowercase;
+  var numbers;
+  var specialCharacter;
 
 // example var selectionOfCharacters = confirm(
 // 'Click OK to confirm including selection of characters.');
-  // uppercase = confirm("would you like an uppercase?");
-  // lowercase = confirm("Would you like a lowercase?");
-  // numbers = confirm("Would you like numbers?");
-  // specialCharacter = confirm("would you like special characters?");
+  uppercase = confirm("would you like an uppercase?");
+  lowercase = confirm("Would you like a lowercase?");
+  numbers = confirm("Would you like numbers?");
+  specialCharacter = confirm("would you like special characters?");
 
 //make a conditional statement that handles if someone cancels all confirms
 
@@ -56,7 +55,7 @@ function promptPasswordOptions() {
 
 //return statement to return the user input
 
-}
+// }
 
 
 //==========================================================
@@ -99,7 +98,7 @@ function promptPasswordOptions() {
 
 // Add event listener to generate button
 //document.getElementById("password").value = password;
-//generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener("click", promptPasswordOptions);
 
 // function copyPassword() {
 //   var copyText = document.getElementById("#generate");
