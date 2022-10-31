@@ -10,43 +10,41 @@ var numbers = ["0","1","2","3","4","5","6","7","8","9"];
 function promptPasswordOptions() {
 
 //get desired password line from user
-  var characters = prompt("How long would you like your password to be?")
-  
-
-// research partsInt & promp, make variable with these
-  characters = parseInt(characters)
-    if(characters < 8 || characters > 128) {
-      alert ("characters must be betwwen 8-128")
-      return;
-    }
-
+  var length = parseInt(prompt("How long would you like your password to be?"))
+  console.log(length)
+  console.log(typeof(length))
 // make a conditional to handle for user for "NAN"
-// if(isNaN()){
-//   return "Not a number"}
-//   alert("Please enter a number")
-//   return;
-}
-
+  if(Number.isNaN(length)){
+    alert ("Not a number")
+    return null;
+  } 
 
 // make conditional that handles if a number is less than 8, larger than 128.
+// research partsInt & promp, make variable with these
+    if(length < 8 || length > 128) {
+      alert ("characters must be betwwen 8-128")
+      return null;
+    }
 
-// if(characters < 8 || characters > 128) {
-//   alert ("characters must be betwwen 8-128")
-//   return;
-// }
+
+
+
+
 
 // make 4 variables for each confirm statements
-  var uppercase;
-  var lowercase;
-  var numbers;
-  var specialCharacter;
+  var isUppercase = confirm("would you like an uppercase?");
+  var isLowercase = confirm("Would you like a lowercase?");
+  var isNumber = confirm("Would you like numbers?");
+  var isSpecialCharacter = confirm("would you like special characters?");
+  
+  if (isUppercase === false && isLowercase === false && isNumber === false && isSpecialCharacter === false) {
+    alert ("Must choose at least one character type")
+    return null;
+  }
 
+}
 // example var selectionOfCharacters = confirm(
 // 'Click OK to confirm including selection of characters.');
-  uppercase = confirm("would you like an uppercase?");
-  lowercase = confirm("Would you like a lowercase?");
-  numbers = confirm("Would you like numbers?");
-  specialCharacter = confirm("would you like special characters?");
 
 //make a conditional statement that handles if someone cancels all confirms
 
