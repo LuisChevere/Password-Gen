@@ -100,9 +100,18 @@ function generatePassword() {
   }
   
   //for loops x 2
+  for (var i = 0; i < isLowercase.length; i++) {
+
+  }
+
+  for ( var i = 0; i < isUppercase.length; i++){
+    
+  }
+
+    
 }
 
-//document.getElementById("password").value = password;
+document.getElementById("password").value = password;
 generateBtn.addEventListener("click", promptPasswordOptions);
 //make a conditional statement that handles if someone cancels all confirms
 
