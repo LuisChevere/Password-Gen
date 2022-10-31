@@ -55,8 +55,8 @@ function promptPasswordOptions() {
   return userInfo;
 
 }
-function callRandom(arr){
-  var randomIndex = Math.floor(Math.random() *  arr.length)
+function callRandom(arr) {
+  var randomIndex = Math.floor(Math.random() * arr.length)
   console.log(callRandom)
   var randomChar = arr[randomIndex]
 
@@ -65,58 +65,61 @@ function callRandom(arr){
 
 function generatePassword() {
   var userOptions = promptPasswordOptions();
+  var passwordText = document.querySelector("#password");
+
   // declare 3 empty arrays, if statement for the confirms. if true, call array
   let lowercase = []
   let uppercase = []
   let specialCharacter = []
-  
 
-  if(userOptions.isUppercase){
+
+  if (userOptions.isUppercase) {
     possibleChar = possibleChar.concat(uppercase)
     console.log(possibleChar)
-  guaranteeChar.push(callRandom(uppercase))
+    guaranteeChar.push(callRandom(uppercase))
     console.log(guaranteeChar)
   }
 
-  if(userOptions.isLowercase){
+  if (userOptions.isLowercase) {
     possibleChar = possibleChar.concat(lowercase)
     console.log(possibleChar)
-  guaranteeChar.push(callRandom(lowercase))
+    guaranteeChar.push(callRandom(lowercase))
     console.log(guaranteeChar)
   }
 
-  if(userOptions.isNumber){
+  if (userOptions.isNumber) {
     possibleChar = possibleChar.concat(numbers)
     console.log(possibleChar)
-  guaranteeChar.push(callRandom(numbers))
+    guaranteeChar.push(callRandom(numbers))
     console.log(guaranteeChar)
   }
 
-  if(userOptions.isSpecialCharacter){
+  if (userOptions.isSpecialCharacter) {
     possibleChar = possibleChar.concat(specialCharacter)
     console.log(possibleChar)
-  guaranteeChar.push(callRandom(specialCharacter))
+    guaranteeChar.push(callRandom(specialCharacter))
     console.log(guaranteeChar)
   }
-  
+
   //for loops x 2
   for (var i = 0; i < isLowercase.length; i++) {
 
   }
 
-  for ( var i = 0; i < isUppercase.length; i++){
-    
+  for (var i = 0; i > isUppercase.length; i++) {
+
   }
 
-    
+  passwordText.value = password;
+
+  document.getElementById("#generate");
 }
 
-document.getElementById("password").value = password;
+
 generateBtn.addEventListener("click", promptPasswordOptions);
 //make a conditional statement that handles if someone cancels all confirms
 
 //make an object that will take into account the user input (this will be a variable)
-// var arr = [4];
 
 //return statement to return the user input
 
