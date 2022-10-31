@@ -65,7 +65,10 @@ function callRandom(arr){
 
 function generatePassword() {
   var userOptions = promptPasswordOptions();
-  // declare 3 empty arrays, if statement for the confirms. if useroptions.isnumber. if true, call array
+  // declare 3 empty arrays, if statement for the confirms. if true, call array
+  let lowercase = []
+  let uppercase = []
+  let specialCharacter = []
   
 
   if(userOptions.isUppercase){
@@ -74,10 +77,33 @@ function generatePassword() {
   guaranteeChar.push(callRandom(uppercase))
     console.log(guaranteeChar)
   }
+
+  if(userOptions.isLowercase){
+    possibleChar = possibleChar.concat(lowercase)
+    console.log(possibleChar)
+  guaranteeChar.push(callRandom(lowercase))
+    console.log(guaranteeChar)
+  }
+
+  if(userOptions.isNumber){
+    possibleChar = possibleChar.concat(numbers)
+    console.log(possibleChar)
+  guaranteeChar.push(callRandom(numbers))
+    console.log(guaranteeChar)
+  }
+
+  if(userOptions.isSpecialCharacter){
+    possibleChar = possibleChar.concat(specialCharacter)
+    console.log(possibleChar)
+  guaranteeChar.push(callRandom(specialCharacter))
+    console.log(guaranteeChar)
+  }
   
   //for loops x 2
 }
 
+//document.getElementById("password").value = password;
+generateBtn.addEventListener("click", promptPasswordOptions);
 //make a conditional statement that handles if someone cancels all confirms
 
 //make an object that will take into account the user input (this will be a variable)
@@ -127,8 +153,7 @@ function generatePassword() {
 
 
 // Add event listener to generate button
-//document.getElementById("password").value = password;
-generateBtn.addEventListener("click", promptPasswordOptions);
+
 
 // function copyPassword() {
 //   var copyText = document.getElementById("#generate");
