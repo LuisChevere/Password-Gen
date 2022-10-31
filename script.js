@@ -5,6 +5,7 @@ var specialCharacter = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "~", "
 var uppercase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 var lowercase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "l", "m", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+var random = []
 
 //design a function that takes in the user prompt (TA asssistance)
 function promptPasswordOptions() {
@@ -25,10 +26,6 @@ function promptPasswordOptions() {
     alert("characters must be betwwen 8-128")
     return null;
   }
-
-
-
-
 
 
   // make 4 variables for each confirm statements
@@ -55,57 +52,34 @@ function promptPasswordOptions() {
   return userInfo;
 
 }
-function callRandom(arr) {
-  var randomIndex = Math.floor(Math.random() * arr.length)
-  console.log(callRandom)
-  var randomChar = arr[randomIndex]
-
-  return randomChar;
-}
 
 function generatePassword() {
   var userOptions = promptPasswordOptions();
   var passwordText = document.querySelector("#password");
 
-  // declare 3 empty arrays, if statement for the confirms. if true, call array
-  let lowercase = []
-  let uppercase = []
-  let specialCharacter = []
-
 
   if (userOptions.isUppercase) {
-    possibleChar = possibleChar.concat(uppercase)
-    console.log(possibleChar)
-    guaranteeChar.push(callRandom(uppercase))
-    console.log(guaranteeChar)
+    random.push(uppercase)
+    console.log(random)
+  
   }
 
   if (userOptions.isLowercase) {
-    possibleChar = possibleChar.concat(lowercase)
-    console.log(possibleChar)
-    guaranteeChar.push(callRandom(lowercase))
-    console.log(guaranteeChar)
+    random.push(lowercase)
   }
 
   if (userOptions.isNumber) {
-    possibleChar = possibleChar.concat(numbers)
-    console.log(possibleChar)
-    guaranteeChar.push(callRandom(numbers))
-    console.log(guaranteeChar)
+    random.push(numbers)
   }
 
   if (userOptions.isSpecialCharacter) {
-    possibleChar = possibleChar.concat(specialCharacter)
-    console.log(possibleChar)
-    guaranteeChar.push(callRandom(specialCharacter))
-    console.log(guaranteeChar)
+    random.push(specialCharacter)
   }
 
   //for loops x 2
-  for (var i = 0; i < length; i++) {
-    Math.random();
-    console.log(math.random)
-  }
+  // for (var i = 0; i < length; i++) {
+  //   Math.random();
+  // }
 
 
   passwordText.value = password;
