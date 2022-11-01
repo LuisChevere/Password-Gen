@@ -112,22 +112,14 @@ var generateBtn = document.querySelector('#generate');
 // Next make a function that will write the password to the #password input
 function writePassword() {
   // Need to establish a variable that calls your function generatePassword()
-  // const passwordOptions = generatePassword() {
-  //   uppercase:[],
-  //   lowercase:[],
-  //   numbers:[],
-  //   specialCharacter:[],
-  //   // allChar:function(){
-  //   //   return this.uppercase + "" + this.lowercase + "" + this.numbers + "" + this.specialCharacter;
-  //   }
-  
-
-  var passwordText = document.querySelector('#password').value;
+  var password = generatePassword();
+  var passwordText = document.querySelector('#password');
+  passwordText.value = password;
   // Here set the value of your variable passwordText to the variable you make to call your function generatePassword()
-  document.getElementById('#password').innerHTML = passwordText;
+  //document.getElementById('#password').innerHTML = password;
 }
 
-generateBtn.addEventListener("click", promptPasswordOptions);
+generateBtn.addEventListener("click", writePassword);
 
 
 
