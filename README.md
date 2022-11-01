@@ -1,19 +1,20 @@
 # Password Generator challenge
 
-A reset css is in the Assets folder.
+A website has been created for a Password Generator.
 
-Extensive customized Style.css has been made.
+When you click on "Generate Password" a prompt will ask "length of password"
 
-I have created a monocromatic webpage with some basic information about myself.
+After you answer "length of pw", it will ask if you'd like an uppercase,
+if you'd like a lowercase, numbers and special characters.
 
-My first deployment link is attached within the first and large image in the "work" section.
+if you chose none, you will be given an alert saying you must choose one.
 
-all 5 boxes light up when they are hovered.
+If you choose a number below 8 or above 128, it alert that chosen number must be between 8-128.
 
-When an item listed in the Header is clicked, it will lead you to the specific section identified, except for the "Resume" section.
+If you chose a letter, it will alert you that is NaN.
 
-When you approach the footer of the page, you will see contact information, such as contact (not a real number, yet), my github link and the LinkedIn.
+Once you've chosen all of the requirements it will then generate a randomized password.
 
 [Deployed Link Here](https://luischevere.github.io/Password-Gen/)
 
-![site image]()
+![site image](https://raw.githubusercontent.com/LuisChevere/Password-Gen/63f3b33639b47e261b1eec7ddcf0c896fe1eed68/images/Screenshot%202022-10-31%20at%2010.55.04%20PM.png)
