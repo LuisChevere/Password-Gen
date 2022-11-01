@@ -81,15 +81,18 @@ function generatePassword() {
   }
 
   if (userOptions.isLowercase) {
-    random.push(lowercase)
+    potentialChar = potentialChar.concat(lowercase)
+    chosenChar.push(callRandom(lowercase))
   }
 
   if (userOptions.isNumber) {
-    random.push(numbers)
+    potentialChar = potentialChar.concat(numbers)
+    chosenChar.push(callRandom(numbers))
   }
 
   if (userOptions.isSpecialCharacter) {
-    random.push(specialCharacter)
+    potentialChar = potentialChar.concat(specialCharacter)
+    chosenChar.push(callRandom(specialCharacter))
   }
 
 // for loop to iterate over potentional char
